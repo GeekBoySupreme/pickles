@@ -1,13 +1,22 @@
 <html>
     <head>
+        <link rel="stylesheet" href="assets/styles/editor.css"/>
         <script src="assets/scripts/jquery.min.js"></script>
         <script src="assets/scripts/fabric.min.js"></script>
     </head>
 
     <body>
         <canvas id="canvas" width="500" height="500"></canvas>
-
         <script src="assets/scripts/editor.js"></script>
+
+
+        <button onclick="drawRectangle()">Rect</button>
+        <button onclick="drawCircle()">Circle</button>
+
+        <button onclick="changeColor()">Color</button>
+        <button onclick="deleteObject()">Delete</button>
+
+
     </body>
 
 </html>
