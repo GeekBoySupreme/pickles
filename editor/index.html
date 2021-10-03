@@ -3,6 +3,7 @@
         <link rel="stylesheet" href="assets/styles/editor.css"/>
         <script src="assets/scripts/jquery.min.js"></script>
         <script src="assets/scripts/fabric.min.js"></script>
+        <script src="assets/scripts/FileSaver.min.js"></script>
     </head>
 
     <body>
@@ -12,9 +13,15 @@
 
         <button onclick="drawRectangle()">Rect</button>
         <button onclick="drawCircle()">Circle</button>
+        <button onclick="addImage()">Image</button>
 
         <button onclick="changeColor()">Color</button>
         <button onclick="deleteObject()">Delete</button>
+
+        <button onclick="saveImage()">Save</button>
+
+        <button onclick="setBackground()">Background</button>
+         
 
 
     </body>
