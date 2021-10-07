@@ -106,7 +106,7 @@ async function createData() {
             name: 'Pickle Rick',
             social_handle: '@picklerick',
             remix: 0,
-            featured: 1
+            featured: 0
         }
     ])
     .then(data => console.log(data))

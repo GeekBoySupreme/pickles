@@ -557,6 +557,11 @@ button:active {
   .notice-holder {
     display: flex;
   }
+
+  .footer{
+    padding: 20px;
+    text-align: center;
+  }
   
 }
 
