@@ -22,16 +22,18 @@ async function getData() {
     .select()
     .then(data => {
         renderImages(data);
-        console.log(data);
+        //console.log(data);
     })
 }
 
 function renderImages(data) {
     console.log(data.body.length);
 
-    var image = document.createElement('img');
-    image.src = data.body[19].image_data;
-    document.body.appendChild(image);
+    // var image = document.createElement('img');
+    // image.src = data.body[19].image_data;
+    // document.body.appendChild(image);
+
+    // var html = "<div class='col-lg-6'><img src='"+ data.body[5].src +"' class='img-fluid'/></div>
 
     var featured_html = '';
     var featured_grid_small = '<div class="col-lg-6"><div class="row">';
@@ -41,15 +43,15 @@ function renderImages(data) {
 
     for(var i=0; i<data.body.length; i++) {
         if(featured_count == 5) {
-            featured_html += "<div class='col-lg-6'><img src='"+ data.body[5].src +"' class='img-fluid'/></div>";
+            featured_html += "<div class='col-lg-6'><img src='"+ data.body[5].image_data +"' class='img-fluid'/></div>";
             featured_count--;
         }
         else if(featured_count<5 && featured_count>0) {
-            featured_grid_small += "<div class='col-lg-6'><img src='"+ data.body[i].src +"' class='img-fluid'/></div>";
+            featured_grid_small += "<div class='col-lg-6'><img src='"+ data.body[i].image_data +"' class='img-fluid'/></div>";
             featured_count--;
         }
         else {
-            all_html += "<div class='col-lg-6'><img src='"+ data.body[i].src +"' class='img-fluid'/></div>";
+            all_html += "<div class='col-lg-4'><img src='"+ data.body[i].image_data +"' class='img-fluid'/></div>";
         }
     }
 
