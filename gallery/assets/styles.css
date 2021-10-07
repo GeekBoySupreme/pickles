@@ -622,3 +622,19 @@ button:active {
       margin-top: 60px;
       margin-bottom: 80px;
   }
+
+  .footer{
+      padding-bottom: 20px;
+  }
+
+  .footer .intent_button {
+      padding: 8px 16px;
+  }
+
+  .fa-heart {
+      color: rgb(233, 80, 59);
+  }
+
+  .fa-twitter {
+      color :rgb(57, 159, 255);
+  }
