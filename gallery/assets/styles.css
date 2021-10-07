@@ -624,7 +624,7 @@ button:active {
 
 
   .everything-else-container {
-      margin-top: 60px;
+      margin-top: 20px;
       margin-bottom: 80px;
   }
 
@@ -649,4 +649,19 @@ button:active {
   .menu_container {
       position: sticky;
       top: 0px;
+  }
+
+  .image_card {
+      padding-bottom: 16px;
+  }
+
+  .image_card .intent_button {
+      position: relative;
+      top: -20px;
+      left: 6px;
+      border-radius: 2;
+  } 
+
+  #featured-container .image_card {
+      padding-bottom: 6px;
   }
