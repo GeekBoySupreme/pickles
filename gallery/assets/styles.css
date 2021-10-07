@@ -1,0 +1,578 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap");
+
+body {
+  font-family: "Quicksand", sans-serif;
+  color: rgb(209, 205, 199);
+  background-color: rgb(24, 26, 27);
+  -webkit-tap-highlight-color: transparent; 
+}
+
+.task_container {
+  margin: 10px 0px;
+  padding: 30px 40px 30px 20px;
+  border-radius: 10px;
+  color: rgb(209, 205, 199);
+  background-color: rgb(24, 26, 27);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.2s ease;
+}
+
+.add_task_container {
+  width: 100%;
+  margin-left: 12px;
+  padding-bottom: 35px;
+  border-bottom: 0.5px solid rgba(255,255,255,0.1);
+}
+
+.menu_container {
+  padding-top: 30px;
+  margin-top: 35px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+
+  color: rgb(209, 205, 199);
+}
+
+#task_list {
+  width: 100%;
+  display: block;
+  margin-top: 10px;
+
+  transition: all 0.2s ease;
+}
+
+.task_header {
+  width: 100%;
+  margin-top: 40px;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(209, 205, 199);
+
+  justify-content: center;
+  padding-left: 16px;
+}
+
+#task_count {
+  font-size: 12px;
+  padding: 4px 9px;
+  border-radius: 50px;
+  text-align: center;
+  color: white;
+  background-color: rgb(43, 43, 43);
+  min-width: 22px;
+
+  margin-left: 6px;
+}
+
+#addTask {
+  border: none;
+  outline: none;
+  width: 100%;
+  min-height: 80px;
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+
+  font-size: 20px;
+  font-weight: 600;
+  border-bottom: 1px solid transparent;
+}
+
+::placeholder {
+  color: rgb(148, 148, 148);
+  opacity: 1;
+}
+
+.add_task_button {
+  margin-top: 15px;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 10px;
+  border-radius: 50px;
+  color: white;
+  background-color: rgb(34, 34, 34);
+
+  border: none;
+  outline: none;
+
+  transition: all 0.2s ease;
+  float: right;
+  width: 120px;
+  height: 40px;
+}
+
+
+.add_task_button_2 {
+  margin-top: 15px;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 10px;
+  border-radius: 50px;
+  color: white;
+  background-color: rgb(34, 34, 34);
+
+  border: none;
+  outline: none;
+
+  transition: all 0.2s ease;
+  float: right;
+  width: 40px;
+  height: 40px;
+  margin-left: 12px;
+}
+
+.intent_button, .createmeet_button {
+  border: none;
+  outline: none;
+
+  background: rgb(34, 34, 34);
+  color: white;
+  border-radius: 50px;
+  position: relative;
+  left: -3px;
+
+  padding: 5px 22px 5px 17px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+
+  margin-top: 8px;
+}
+
+.intent_button:hover, .createmeet_button:hover {
+  background-color: rgb(46, 46, 46);
+}
+
+.todo {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(201, 201, 201);
+
+  margin: 8px 1px 8px 1px;
+
+  transition: all 0.3s ease;
+  animation: appearIn 0.2s ease;
+  cursor: context-menu;
+
+  padding: 10px 16px;
+  border-radius: 6px;
+}
+
+.todo:hover, .todo:focus, .todo:active {
+  background: rgba(255,255,255, 0.05);
+}
+
+/* .todo_new {
+  font-size: 15px;
+  font-weight: 500;
+
+  margin: 20px 1px;
+
+  transition: all 0.2s ease;
+  animation: appearIn 0.2s ease;
+} */
+
+.todo_button_container .intent_button {
+  margin-left: 3px;
+}
+
+.todo_button_container {
+  margin-left: 8px;
+}
+
+
+.todo .todo_button_container {
+  margin-top: 0px;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.todo:hover .todo_button_container {
+  opacity: 1;
+  height: 2.35em;
+}
+
+@keyframes appearIn {
+  0% {
+    position: relative;
+    opacity: 0px;
+    /* left: -3px; */
+  }
+  100% {
+    position: relative;
+    opacity: 1;
+    /* left: 0px; */
+  }
+}
+
+/*------- Scrollbar --------------*/
+body::-webkit-scrollbar {
+  width: 0rem !important;
+}
+
+body::-webkit-scrollbar-track {
+  background: #ececec;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #929292 !important;
+  border-radius: 50px;
+}
+
+#IntentTriggerModal,
+#IntentTriggerModal_getAPI,
+#IntentTriggerModal_setReminder,
+#IntentTriggerModal_reminderPrompt,
+#IntentTriggerModal_about {
+  backdrop-filter: blur(10px);
+}
+
+
+
+.intent_button_small {
+  border: none;
+  outline: none;
+
+  background: rgb(34, 34, 34);
+  color: white;
+  border-radius: 50px;
+
+  padding: 7px 15px 7px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+
+  margin-top: 8px;
+}
+
+.intent_button_small:hover {
+  background: rgb(43, 43, 43);
+}
+
+
+
+
+table td {
+  font-weight: 600;
+}
+
+td:nth-child(odd) {
+  width: 350px !important;
+}
+
+table {
+  margin-left: 6px;
+}
+
+
+
+.content_block .intent_button {
+  margin: 10px;
+  padding: 8px 25px;
+  font-size: 14px;
+}
+
+.close {
+  border: none;
+  outline: none;
+
+  background: rgb(43, 43, 43);
+  color: rgb(233, 233, 233);
+  border-radius: 50px;
+
+  padding: 6px 8px;
+  font-size: 13px;
+  font-weight: 400;
+  transition: all 0.2s ease;
+
+  float: right;
+  margin-right: 4px;
+}
+
+button:focus,
+button:active {
+  outline: none;
+}
+
+.modal_header {
+  width: 100%;
+}
+
+.content_block {
+  text-align: center;
+  padding: 2px 10px 5px 10px;
+
+  transition: all 0.3s ease;
+  margin-top: 8px;
+}
+
+.content_block img {
+  margin-bottom: 10px;
+}
+
+.content_block .content_title {
+  font-size: 20px;
+  font-weight: 800;
+  color: rgb(73, 73, 73);
+  margin-bottom: 15px;
+}
+
+.intents_pills {
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  font-weight: 800;
+  padding: 5px 18px;
+  border-radius: 50px;
+  margin: 5px;
+  animation: all 0.2s ease;
+  white-space: nowrap;
+
+  background-color: rgb(57, 110, 255);
+}
+
+#extracted_intents {
+  margin-bottom: 20px;
+}
+
+.input_box_big {
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 10px 0px;
+  width: 100%;
+  min-height: 80px;
+  background-color: rgba(73, 73, 73, 0.055);
+  color: rgb(255, 255, 255);
+
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.input_box {
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 4px;
+  margin: 2px 0px 5px 0px;
+  width: 100%;
+  min-height: 40px;
+  background-color: rgba(73, 73, 73, 0.055);
+  color: rgb(255, 255, 255);
+
+  font-size: 15px;
+  font-weight: 400;
+  transition: all 0.2s ease;
+}
+
+.summary_text {
+  text-align: left;
+  transition: all 0.2s ease;
+  margin: 10px;
+  min-height: 50px;
+  white-space: pre-line;
+
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.modal-dialog {
+  max-width: 600px;
+}
+
+#modal_content {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 15px;
+}
+
+/* ----------------------- Movie Styles ------------------------------ */
+.tab_section {
+  width: 100%;
+  margin: 6px 0px 8px 0px;
+  text-align: left;
+  position: relative;
+  left: -5px;
+}
+
+.movie_prompt, .movie_prompt_1 {
+  border: none;
+  outline: none;
+  text-decoration: none;
+
+  background-color: rgb(32, 35, 37);
+  color: rgb(187, 181, 172);
+  border-radius: 50px;
+  display: inline-block;
+  padding: 6px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+
+  margin: 5px 5px 5px 0px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.movie_prompt:hover, .movie_prompt:active, .movie_prompt:focus {
+  color: white;
+  background: rgb(34, 34, 34);
+}
+
+.movie_prompt_1:hover, .movie_prompt_1:active, .movie_prompt_1:focus {
+  color: white;
+  background: rgb(34, 34, 34);
+}
+
+
+.swiggy {
+  background-color: rgb(255, 153, 0);
+  color: white;
+}
+
+.zomato {
+  background-color: rgb(223, 70, 43);
+  color: white;
+}
+
+/* ----------------------- Song Styles ------------------------------ */
+.spotify_open_button {
+  color: rgb(255, 255, 255);
+  background-color: rgb(34, 34, 34);
+  padding: 15px 50px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 8px;
+}
+
+.banner_image {
+  width: 50%;
+}
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  .icon_text {
+    display: none;
+  }
+  
+}
+
+
+
+.set_reminder {
+  max-width: 450px!important;
+}
+
+
+#content {
+  transition: all 0.2s ease;
+  /* background-color: rgb(50, 107, 214); */
+  border-radius: 4px;
+  margin: 4px auto;
+  width: 100%;
+  padding: 8px 12px;
+  color: white;
+}
+
+#createmeet_button, .createmeet_button {
+  width: 100%;
+  height: 55px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+#createmeet_button:hover, .createmeet_button:hover {
+  color: white;
+}
+
+#reminder_block {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.just_text {
+  font-weight: 600;
+  padding: 5px 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  width: 100%!important;
+  color: rgb(209, 205, 199);
+
+  border: none;
+  outline: none;
+  width: 200px!important;
+  text-align: left;
+  background-color: transparent;
+  margin-bottom: 8px;
+}
+
+.just_text:hover {
+  background-color: #9292920c;
+}
+
+
+.button_container {
+  float: left;
+}
+
+.button_container {
+  display: flex;
+  flex-direction: row;
+}
+
+.modal-content {
+  background-color: rgb(24, 26, 27);
+    border-color: rgba(140, 130, 115, 0.2);
+    outline-color: initial;
+}
+
+
+.notice-holder {
+  display: none;
+}
+
+@media (max-width: 994px) {
+  
+  .app-holder {
+    display: none;
+  }
+
+  .notice-holder {
+    display: flex;
+  }
+  
+}
+
+
+
+
+.tva_container {
+  display: flex;
+  flex-direction: row;
+}
+
+
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+::-webkit-time-picker-indicator {
+  filter: invert(1);
+}
