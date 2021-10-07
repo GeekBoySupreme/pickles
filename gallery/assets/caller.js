@@ -21,7 +21,8 @@ async function getData() {
     .from('pickle-gallery')
     .select()
     .then(data => {
-        renderImages(data);
+        //renderImages(data);
+        console.log(data);
     })
 }
 

@@ -8,6 +8,10 @@ body {
   -webkit-tap-highlight-color: transparent; 
 }
 
+.img-fluid {
+    width: 100%;
+}
+
 .task_container {
   margin: 10px 0px;
   padding: 30px 40px 30px 20px;
@@ -33,7 +37,7 @@ body {
 .menu_container {
   padding-top: 30px;
   margin-top: 35px;
-  position: fixed;
+  /* position: fixed; */
   display: flex;
   flex-direction: column;
 
@@ -133,7 +137,7 @@ body {
 
   background: rgb(34, 34, 34);
   color: white;
-  border-radius: 50px;
+  border-radius: 2px;
   position: relative;
   left: -3px;
 
@@ -187,18 +191,13 @@ body {
 }
 
 
-.todo .todo_button_container {
-  margin-top: 0px;
-  height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: all 0.2s ease;
-}
-
 .todo:hover .todo_button_container {
   opacity: 1;
   height: 2.35em;
 }
+
+
+
 
 @keyframes appearIn {
   0% {
@@ -576,3 +575,50 @@ button:active {
 ::-webkit-time-picker-indicator {
   filter: invert(1);
 }
+
+
+
+
+
+.menu_container #createmeet_button {
+    margin-top:0px!important;
+}
+
+.menu_container #createmeet_button:hover {
+    background: #3b5fff;
+}
+
+
+.featured-container {
+    padding-top: 30px;
+    margin-top: 35px;
+}
+
+
+.title-text {
+    text-align: left;
+    transition: all 0.2s ease;
+    margin: 0px;
+    min-height: 50px;
+    white-space: pre-line;
+  
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+
+  .loader-gif {
+      min-height: 210px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      border: 2px dashed rgb(95, 93, 93);
+      border-radius: 4px;
+  }
+
+
+  .everything-else-container {
+      margin-top: 60px;
+      margin-bottom: 80px;
+  }

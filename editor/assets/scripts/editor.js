@@ -109,4 +109,5 @@ async function createData() {
             featured: 1
         }
     ])
+    .then(data => console.log(data))
 }
