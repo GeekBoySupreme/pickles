@@ -54,7 +54,7 @@ function renderImages(data) {
 
     var featured_count = 5;
 
-    for(var i=0; i<data.body.length; i++) {
+    for(var i=data.body.length-1; i>=0; i--) {
         if(featured_count == 5) {
             featured_html += "<div class='col-lg-6'><div class='image_card'>\
                               <img src='"+ data.body[i].image_data +"' class='img-fluid'/>\
