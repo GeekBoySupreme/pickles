@@ -94,7 +94,7 @@ function saveImage() {
 function setBackground() {
     var img = new Image();
     img.crossOrigin = 'anonymous';
-    img.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1KOgrpDSvLR_YsBx7k6ygmKP-C4g38R_HRQ&usqp=CAU';
+    img.src = '/editor/assets/images/bgmaz.jpg';
 
     img.onload = function() {
         var imgInstance = new fabric.Image(img, {

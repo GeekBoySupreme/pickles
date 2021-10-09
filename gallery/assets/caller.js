@@ -20,7 +20,7 @@ async function createData() {
             featured: 0
         }
     ])
-    .then(data => function() {
+    .then(data => {
         console.log("YooHoo!");
         alert("Pickle published to Gallery!");
         document.getElementById('close_reminder_modal').click();
