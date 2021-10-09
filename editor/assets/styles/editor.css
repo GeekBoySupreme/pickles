@@ -1,7 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap");
+
 body {
-    background-color: rgb(10, 10, 10);
+  font-family: "Quicksand", sans-serif;
+  color: rgb(209, 205, 199);
+  background-color: rgb(24, 26, 27);
+  -webkit-tap-highlight-color: transparent; 
 }
 
 #canvas {
-    background: url(https://mir-s3-cdn-cf.behance.net/project_modules/1400/a56ba973285815.5c04fe35d86bb.png) no-repeat;
+    background: rgba(255,255,255, 0.05);
+    border-radius: 4px;
+    margin: 0 auto;
+}
+
+
+.canvas-holder {
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.toolbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 14px;
+    background-color: rgb(31, 31, 31);
+    border-radius: 4px;
+    position: relative;
+    top: -20px;
+}
+
+.toolbar button {
+    border: none;
+    background: none;
+    outline: none;
+    color: #ffffff;
+    padding: 14px;
+    border-radius: 3px;
+    transition: all 0.1s ease;
+    font-weight: 800;
+}
+
+.toolbar button:hover,
+.toolbar button:active {
+    background: rgb(36, 36, 36);
+}
+
+
+
+.rectangle:hover {
+    color: rgb(79, 161, 255);
+}
+
+.circle:hover {
+    color: rgb(250, 145, 185);
+}
+
+.sticker:hover {
+    color: rgb(255, 194, 81);
+}
+
+.emoji:hover {
+    color: rgb(255, 231, 93);
+}
+
+.background:hover {
+    color: #d770ff;
+}
+
+.colorbucket:hover {
+    color: peachpuff;
+}
+
+.delete:hover {
+    color: rgb(255, 99, 79);
+}
+
+.divider {
+    opacity: 0.1;
+    margin: 0px 8px;
 }
