@@ -55,6 +55,23 @@ function addImage() {
 }
 
 
+
+function addEmoji() {
+    var img = new Image();
+    img.crossOrigin = 'anonymous';
+    img.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1KOgrpDSvLR_YsBx7k6ygmKP-C4g38R_HRQ&usqp=CAU';
+    img.onload = function() {
+        var imgInstance = new fabric.Image(img, {
+            left: 100,
+            top: 100,
+            angle: 0,
+            opacity: 1
+        });
+        canvas.add(imgInstance);
+    };
+}
+
+
 function saveImage() {
     var canv = document.getElementById('canvas');
     canv.toBlob(function(blob) {
