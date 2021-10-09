@@ -105,6 +105,8 @@ function setBackground() {
 
 
 
-
+function randomize(max) {
+    return (Math.random() * (max - 0));
+}
 
 
