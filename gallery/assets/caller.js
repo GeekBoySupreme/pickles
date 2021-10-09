@@ -76,6 +76,3 @@ function renderImages(data) {
     document.getElementById("everything-else-container").innerHTML = all_html;
 
 }
-
-
-getData();

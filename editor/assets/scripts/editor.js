@@ -28,8 +28,15 @@ function drawCircle() {
 
 
 function changeColor() {
+    var colorpick = [
+        '#32a852', '#4ed491', '#7affe0', '#4787bf', '#3e73cf', '#005dff', '#6a53fc', '#b653fc', '#fc53f6', '#fc536c',
+        '#ff3030', '#baff59', '#eaff5e', '#eaff5e', '#fa9e48', '#fa7448', '#fa5d48'
+    ]
+
+    var index = randomize(colorpick.length-1);
+
     var obj = canvas.getActiveObject();
-    obj.set('fill', 'blue');
+    obj.set('fill', colorpick[index]);
     canvas.renderAll();
 }
 
@@ -41,8 +48,10 @@ function deleteObject() {
 
 function addImage() {
     var img = new Image();
+
+    var index = randomize(49);
     img.crossOrigin = 'anonymous';
-    img.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1KOgrpDSvLR_YsBx7k6ygmKP-C4g38R_HRQ&usqp=CAU';
+    img.src = '/editor/assets/images/1 ('+ index +').svg';
     img.onload = function() {
         var imgInstance = new fabric.Image(img, {
             left: 100,
@@ -56,20 +65,22 @@ function addImage() {
 
 
 
-function addEmoji() {
-    var img = new Image();
-    img.crossOrigin = 'anonymous';
-    img.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1KOgrpDSvLR_YsBx7k6ygmKP-C4g38R_HRQ&usqp=CAU';
-    img.onload = function() {
-        var imgInstance = new fabric.Image(img, {
-            left: 100,
-            top: 100,
-            angle: 0,
-            opacity: 1
-        });
-        canvas.add(imgInstance);
-    };
-}
+// function addEmoji() {
+//     var img = new Image();
+
+//     var index = randomize(49);
+//     img.crossOrigin = 'anonymous';
+//     img.src = '/editor/assets/images/1('+ index +').svg';
+//     img.onload = function() {
+//         var imgInstance = new fabric.Image(img, {
+//             left: 100,
+//             top: 100,
+//             angle: 0,
+//             opacity: 1
+//         });
+//         canvas.add(imgInstance);
+//     };
+// }
 
 
 function saveImage() {
@@ -106,7 +117,7 @@ function setBackground() {
 
 
 function randomize(max) {
-    return (Math.random() * (max - 0));
+    return (Math.floor(Math.random() * (max - 0)));
 }
 
 
