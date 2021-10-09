@@ -49,7 +49,7 @@ function renderImages(data) {
     // var html = "<div class='col-lg-6'><img src='"+ data.body[5].src +"' class='img-fluid'/></div>
 
     var featured_html = '';
-    var featured_grid_small = '<div class="col-lg-6"><div class="row">';
+    var featured_grid_small = '<div class="col-lg-6"><div class="row wow-row">';
     var all_html = '';
 
     var featured_count = 5;
