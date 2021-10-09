@@ -5,18 +5,26 @@ supabase = createClient("https://jxywbtgddxjqlcwoioah.supabase.co", "eyJhbGciOiJ
 
 
 async function createData() {
+
+    var name_string = document.getElementById('name').value || 'Anonymous';
+    var social_string = document.getElementById('instagram').value || '';
+
     const { data, error} = await supabase
     .from('pickle-gallery')
     .insert([
         {
             image_data: canvas.toDataURL(),
-            name: 'Pickle Rick',
-            social_handle: '@picklerick',
+            name: name_string,
+            social_handle: social_string,
             remix: 0,
             featured: 0
         }
     ])
-    .then(data => console.log("YooHoo!"))
+    .then(data => function() {
+        console.log("YooHoo!");
+        alert("Pickle published to Gallery!");
+        document.getElementById('close_reminder_modal').click();
+    })
 }
 
 

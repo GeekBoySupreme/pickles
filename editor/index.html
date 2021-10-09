@@ -79,7 +79,7 @@
                             <button title="Delete" class="delete" onclick="deleteObject()"><i class="far fa-trash-alt"></i></button>
                             <span class="divider">|</span>
                             <button title="Save" class="rectangle" onclick="saveImage()"><i class="far fa-save"></i></button>
-                            <button title="Publish" class="circle" onclick="createData()"><i class="fas fa-broadcast-tower"></i></button>
+                            <button title="Publish" class="circle" data-toggle="modal" data-target="#Publish_Modal"><i class="fas fa-broadcast-tower"></i></button>
                         </div>
 
                        
@@ -88,6 +88,32 @@
                 </div>
             </div>
         
+            <div class="modal fade" id="Publish_Modal" tabindex="-1" role="dialog" aria-labelledby="IntentBaseModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog set_reminder" role="document">
+                <div class="modal-content">
+        
+                    <div class="modal-body">
+                        <div class="modal_header">
+                            <button class="close" id="close_reminder_modal" data-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i></button>
+                        </div>
+        
+                        <div id="modal_content"><div class='content_block'>
+                            <!-- <img class="publish_image" src="https://giphy.com/static/img/creation_tools/gif-maker-peeker.gif"/> -->
+                            <p class='title-text' style="min-height: 10px; margin: 0 auto; text-align:center;">Publish to Gallery</p>
+                            <br/>    
+                            <input id='name' class='input_box'
+                                placeholder='Your name' required/>
+                                <input id='instagram' class='input_box'
+                                placeholder='Your Instagram handle' required/>
+                                <button class="intent_button"
+                                id="createmeet_button" style="margin-left:3px" onclick="createData()">Publish to Gallery</button>
+                        </div></div>
+                    </div>
+        
+                </div>
+            </div>
+        </div>
 
         <script src="../gallery/assets/caller.js"></script>
 

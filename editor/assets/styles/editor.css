@@ -93,3 +93,11 @@ body {
     margin: 0px 8px;
     cursor: inherit;
 }
+
+
+.publish_image {
+    width: 200px;
+    margin: 0 auto;
+    position: relative;
+    top: -100px;
+}
