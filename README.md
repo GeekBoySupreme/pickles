@@ -1,5 +1,6 @@
 # Pickle
-Pickle is a platform to make silly scrapbook pages online - [Demo](https://picklepixel.netlify.app/)
+Pickle is a platform to make silly scrapbook pages online - [Demo](https://picklepixel.netlify.app/)<br/>
+Here is a [video walkthrough](https://www.loom.com/share/0d2ab19261ab4c4aa85e847f4fa4bc68).
 
 ### Motivation
 With design tools becoming increasingly versatile and far-reaching, we have forgotten the art of making silly scrapbooks online.
