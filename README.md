@@ -14,3 +14,9 @@ Pickle sets out to be the spiritual successor to the Neopets and Geocities of yo
 ### How I used Supabase
 Supabase powers the entire gallery feature of Pickle. The editor is not yet supremely powered and needs a lot of work. But whatever silly, small thing you make, you can publish it to the Pickle gallery to inspire others. Pickle currently does not have an auth - you just add your name and Instagram handle to a form while publishing your pickle.
 The platform uses a couple of simple get( ) and insert( ) requests.
+
+### Team
+'twas a one-man solo strike.<br/>
+Shuvam Manna - [Github](https://github.com/geekboysupreme) | [Twitter](https://twitter.com/shuvam360)
+
+<img src='https://media.giphy.com/media/FKHZLjnz4c2ly/giphy.gif' width='300px'/>
